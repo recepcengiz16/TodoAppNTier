@@ -1,0 +1,26 @@
+﻿@model WorkUpdateDTO
+@{
+    ViewData["Title"] = "Update";
+}
+
+<div class="container my-2">
+    <form asp-action="Update" asp-controller="Home" method="post">
+        <input type="hidden" asp-for="Id" />
+        <div class="mb-3">
+            <label>İşin Tanımı: </label>
+            <input asp-for="Definition" class="form-control" />
+        </div>
+
+        <div class="form-check">
+            <input class="form-check-input" type="checkbox" asp-for="IsCompleted" id="deneme"/>
+            <label class="form-check-label" for="deneme"> Tamamlandı mı? </label>
+        </div>
+
+        <div class="mb-3">
+            <button type="submit" class="btn btn-success">Kaydet</button>
+        </div>
+
+    </form>
+</div>
+
+

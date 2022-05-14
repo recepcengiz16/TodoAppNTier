@@ -51,8 +51,7 @@ namespace TodoAppNTier.DataAccess.Repositories
         }
 
         public void Update(T entity,T unchanged)
-        {
-            var updatedEntity = _context.Set<T>().Find(entity.Id);
+        {            
             _context.Entry(unchanged).CurrentValues.SetValues(entity);
             
         }
